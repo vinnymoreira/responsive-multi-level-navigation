@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click the menu icon on the top right side of screen</h1>
+    </div>
+    <button class="menu-toggle">
+        Menu
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+            <rect y="10" width="40" height="2"></rect>
+            <rect y="20" width="40" height="2"></rect>
+            <rect y="30" width="40" height="2"></rect>
+        </svg>
+    </button>
+    <div class="main-navigation">
+        <div class="main-navigation__left-column">
+            <ul class="main-navigation__nav">
+                <li><a href="#">Home</a></li>
+                <li class="has-submenu">
+                    <a href="#">About</a>
+                    <div class="submenu-container">
+                        <div class="submenu submenu--first-level">
+                            <ul>
+                                <li class="has-submenu" data-submenu="about">
+                                    <a href="#">About Item 1</a>
+                                    <button class="submenu__btn submenu__btn--next">Next</button>
+                                </li>
+                                <li><a href="#">Item 1.1</a></li>
+                                <li><a href="#">Item 1.2</a></li>
+                                <li><a href="#">Item 1.3</a></li>
+                                <li><a href="#">Item 1.1</a></li>
+                                <li><a href="#">Item 1.2</a></li>
+                                <li><a href="#">Item 1.3</a></li>
+                                <li><a href="#">Item 1.1</a></li>
+                                <li><a href="#">Item 1.2</a></li>
+                                <li><a href="#">Item 1.3</a></li>
+                            </ul>
+                        </div><!-- .submenu__first-level -->
+                        <div class="submenu submenu--second-level" data-submenu-id="about">
+                            <ul>
+                                <li><button class="submenu__btn submenu__btn--back">Back</button></li>
+                                <li><a href="#">Second Level</a></li>
+                                <li><a href="#">Item 2.1</a></li>
+                                <li><a href="#">Item 2.2</a></li>
+                                <li><a href="#">Item 2.3</a></li>
+                            </ul>
+                        </div><!-- .submenu__second-level -->
+                    </div><!-- .submenu-container -->
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div><!-- .main-navigation__left-column -->
+        <aside class="main-navigation__right-column">
+            <img src="https://img.logoipsum.com/286.svg">
+        </aside><!-- .main-navigation__right-column -->
+    </div><!-- .main-navigation -->
+    
+    <script src="js/main-navigation.js"></script>
+</body>
+</html>
